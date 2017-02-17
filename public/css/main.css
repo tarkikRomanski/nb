@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+
+
+body {
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+}
+
+body * {
+	-webkit-transition: all 0.5s ease;;
+	-moz-transition: all 0.5s ease;;
+	-o-transition: all 0.5s ease;;
+	transition: all 0.5s ease;
+}
+
+#main-menu-block {
+	background: rgb(25, 25, 25);
+	position: static;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+}
+
+#logo {
+	background: url('../img/logo.png') no-repeat;
+	position: relative;
+}
+
+#logo>a{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}
+
+#main-menu {
+	margin: 0;
+	margin-top: 25px;
+	margin-bottom: 15px;
+	font-weight: 300;
+}
+
+#main-menu li {
+	padding: 0 15px;
+}
+
+li {
+	display: inline-block;
+	list-style-type: none;
+}
+
+#language {
+	display: inline-block;
+	margin: 0;
+}
+
+#language+ul {
+	margin: 0;
+	padding: 0;
+}
+
+#main-menu a {
+	text-transform: uppercase;
+	color: #fefefe;
+	cursor: pointer;
+	text-decoration: none;
+	position: relative;
+}
+
+#main-menu a:hover {
+	color: #e1b73f;
+}
+
+#main-menu a.active {
+	border-bottom: #e1b73f 2px solid;
+}
+
+#main-menu a.active::before {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	content: '';
+	background: url('../img/tringle.png') no-repeat;
+	left:-10px;
+	top:-5px;
+}
+
+.brif {
+	margin-top: 25px;
+}
+
+.brif a {
+	color: #fefefe;
+	border-bottom: #e1b73f 2px solid;
+	position: relative;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.brif a::before {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	content: '';
+	background: url('../img/tringle.png') no-repeat;
+	left:-10px;
+	top:-5px;
+}
+
+.phone {
+	margin-top: 25px;
+}
+
+.phone a {
+	color: #fefefe;
+	position: relative;
+	cursor: default;
+	text-decoration: none;
+}
+
+.language-container {
+	margin-top: 25px;
+	color: #fefefe;
+	position: relative;
+}
+
+.language-container:hover #language+ul{
+	display: block;
+}
+
+#language {
+	cursor: pointer;
+}
+
+#language+ul{
+	z-index:1001;
+	display: none;
+	position: absolute;
+	left: 0;
+	background: rgb(25, 25, 25);
+}
+
+#language+ul li {
+	display: block;
+	margin: 15px;
+	cursor: pointer;
+}
+
+#language+ul li:hover {
+	color: #e1b73f;
+}
+
+.arrow {
+	position: relative;
+}
+
+.arrow::after{
+	position: absolute;
+	content: '';
+	background: url('../img/arrow.png') no-repeat;
+	width: 10px;
+	height: 10px;
+	top: 5px;
+	left: 15px;
+}
+
+#top-banner {
+	background: url('../img/filter.png') , url('../img/top.png') no-repeat;
+	background-size: cover;
+	height: 450px;
+}
+
+#top-text {
+	margin-top: 100px;
+	color: #fefefe;
+}
+
+#top-text p {
+	font-weight: 300;
+}
+
+h1 {
+	text-transform: uppercase;
+}
+
+.btn {
+	border: 3px #e1b73f solid;
+	color: #fefefe;
+	background: rgba(0,0,0,0);
+	text-transform: uppercase;
+	padding: 10px;
+	outline: none;
+}
+
+.btn-blck {
+	border: 3px #e1b73f solid;
+	color: #1f1f1f;
+	background: rgba(0,0,0,0);
+	text-transform: uppercase;
+	padding: 10px;
+	outline: none;
+}
+
+.btn:hover, .btn-blck:hover {
+	color: #1f1f1f;
+	background: #e1b73f;
+	-webkit-transform: rotate(360deg);
+	transform: rotate(360deg);
+}
+
+.modal-bg {
+	display: none;
+	z-index: 2000;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.5);
+}
+
+
+.modal {
+	display: none;
+	z-index: 2001;
+	position: fixed;
+	width: 40%;
+	background-image: url("../img/modal-close.png");
+	background-position: right -2px;
+	background-repeat:  no-repeat;
+	background-color: #FFFFFF;
+	top: 25%;
+	left: 30%;
+	padding: 20px;
+}
+
+.modal-header {
+	margin-bottom: 35px;
+}
+
+input, textarea {
+	width: 100%;
+	border: none;
+	outline: none;
+	padding: 5px;
+	background: #e1e1e1;
+	margin-bottom: 5px;
+}
+
+#categories div {
+	padding: 0;
+	margin-left: 30px;
+	text-transform: uppercase;
+	cursor: pointer;
+
+}
+
+#categories p:hover {
+	border-bottom: #e1b73f 2px solid;
+}
+
+.pages::before {
+	content: '';
+	background: url('../img/pages.png') no-repeat;
+	width: 23px;
+	height: 27px;
+	position: absolute;
+	left: -30px;
+}
